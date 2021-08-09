@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Balance = () => {
+export const Balance = () => {
     return (
         <div>
             <h3>Current Balance</h3>
@@ -8,5 +8,3 @@ const Balance = () => {
         </div>
     )
 }
-
-export default Balance

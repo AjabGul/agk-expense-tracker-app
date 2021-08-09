@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-const AccountSummary = () => {
+export const AccountSummary = () => {
     return (
         <div className="inc-exp-container">
             <div>
@@ -15,5 +15,3 @@ const AccountSummary = () => {
         </div> 
     )
 }
-
-export default AccountSummary

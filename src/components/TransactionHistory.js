@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TransactionHistory = () => {
+export const TransactionHistory = () => {
     return (
         <div>
             <h3>Transaction History</h3>
@@ -19,5 +19,3 @@ const TransactionHistory = () => {
         </div>
     )
 }
-
-export default TransactionHistory
