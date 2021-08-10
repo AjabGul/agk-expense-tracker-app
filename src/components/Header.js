@@ -2,8 +2,8 @@ import React from 'react';
 
 export const Header = () => {
     return (
-        <h1>
-           AGK Exprense Tracker 
-        </h1>
+        <h2>
+           AGK EXPENSE TRACKER 
+        </h2>
     )
 }

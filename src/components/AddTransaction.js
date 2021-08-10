@@ -1,14 +1,30 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react';
+import { GlobalContext } from '../context/GlobalState';
 
 export const AddTransaction = () => {
 
     const [description, SetDescription] = useState();
-    const [trasactionamount, SetTransactionamount] = useState();
+    const [transactionAmount, SetTransactionAmount] = useState();
+
+    const { addTransaction } = useContext(GlobalContext)
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+
+        const newTransaction = {
+            id: new Date().getTime(),
+            description,
+            transactionAmount : +transactionAmount
+        }
+
+        addTransaction(newTransaction);
+
+    }
 
     return (
         <div>
             <h3>Add New Transction</h3>
-            <form>
+            <form onSubmit={onSubmit}>
                 <div className="form-control">
                     <label htmlFor="description">Description</label>
                     <input type="text" 
@@ -23,8 +39,8 @@ export const AddTransaction = () => {
                     <input type="number" 
                             id="tansactionamount" 
                             placeholder="Inter Transaction Amount"
-                            value={trasactionamount}
-                            onChange={(e)=>SetTransactionamount(e.target.value)} 
+                            value={transactionAmount}
+                            onChange={(e)=>SetTransactionAmount(e.target.value)} 
                     />
                 </div>
                 <button className="btn">Add Transaction</button>
