@@ -19,6 +19,11 @@ export const AddTransaction = () => {
 
         addTransaction(newTransaction);
 
+        // once you submite the description and trasactionAmount clear the input fields
+
+        SetDescription('');
+        SetTransactionAmount('');
+
     }
 
     return (
